@@ -2,12 +2,31 @@ package com.cpfei.project;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+import com.cpfei.project.activity.MaterialDesignActivity;
+import com.cpfei.project.activity.material.ToolBarActivity;
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        findViews();
+    }
+
+    private void findViews() {
+        findViewById(R.id.materialDesign).setOnClickListener(this);
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.materialDesign:
+                startActivity(MaterialDesignActivity.createIntent(this));
+                break;
+        }
     }
 }
