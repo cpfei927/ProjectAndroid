@@ -27,6 +27,19 @@
                 android:textSize="@dimen/text_size_22"
                 android:background="@color/color_ff5757"/>
 
+
+            <TextView
+                android:id="@+id/photoView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:text="PhotoView"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_22"
+                android:background="@color/color_46c062"/>
+
+
         </LinearLayout>
 
 

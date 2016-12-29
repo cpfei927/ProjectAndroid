@@ -16,6 +16,11 @@
     </style>
 
 
+    <style name="AppThemeTranslucent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground" >@color/color_00000000</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
     <style name="AppThemeBase" parent="Theme.AppCompat.Light">
         <!-- 去掉actionbar-->
         <item name="windowActionBar">false</item>
