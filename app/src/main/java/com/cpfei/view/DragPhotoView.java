@@ -13,9 +13,11 @@ import android.view.MotionEvent;
 
 import uk.co.senab.photoview.PhotoView;
 /**
- * Created by wing on 2016/12/22.
+ * Created by on 2016/12/22.
+ *
+ * 向左下角活动推出activity
+ *
  */
-
 public class DragPhotoView extends PhotoView {
     private Paint mPaint;
 
