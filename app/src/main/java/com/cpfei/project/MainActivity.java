@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.cpfei.project.activity.DragPhotoViewActivity;
 import com.cpfei.project.activity.MaterialDesignActivity;
+import com.cpfei.project.activity.RecyclerViewGridActivity;
 import com.cpfei.project.activity.material.ToolBarActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void findViews() {
         findViewById(R.id.materialDesign).setOnClickListener(this);
         findViewById(R.id.photoView).setOnClickListener(this);
+        findViewById(R.id.recyclerGridView).setOnClickListener(this);
 
     }
 
@@ -31,6 +33,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.photoView:
                 startActivity(DragPhotoViewActivity.createIntent(this));
+                break;
+            case R.id.recyclerGridView:
+                startActivity(RecyclerViewGridActivity.createIntent(this));
                 break;
         }
     }
