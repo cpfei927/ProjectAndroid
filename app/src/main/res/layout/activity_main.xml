@@ -51,6 +51,18 @@
                 android:background="@color/color_6c6a6a"/>
 
 
+            <TextView
+                android:id="@+id/slideSureView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:text="SlideSureView"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_22"
+                android:background="@color/color_6c6a6a"/>
+
+
         </LinearLayout>
 
 
