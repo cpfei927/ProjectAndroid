@@ -60,7 +60,18 @@
                 android:gravity="center"
                 android:textColor="@color/color_white"
                 android:textSize="@dimen/text_size_22"
-                android:background="@color/color_6c6a6a"/>
+                android:background="@color/color_e66463"/>
+
+            <TextView
+                android:id="@+id/circleProgressBar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:text="CircleProgressBar"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_22"
+                android:background="@color/color_fdab55"/>
 
 
         </LinearLayout>

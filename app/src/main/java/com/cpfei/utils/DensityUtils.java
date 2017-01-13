@@ -6,6 +6,8 @@ import android.graphics.Rect;
 import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
+import com.cpfei.project.MainApp;
+
 import java.lang.reflect.Field;
 
 /**
@@ -14,12 +16,21 @@ import java.lang.reflect.Field;
  */
 public class DensityUtils {
 
+    public static int dip2px(float dipValue) {
+        return dip2px(MainApp.getAppContext(), dipValue);
+    }
+
     public static int dip2px(Context context, float dipValue) {
         if (context == null) {
             return 0;
         }
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (dipValue * scale + 0.5f);
+    }
+
+
+    public static int px2dip(float pxValue) {
+        return px2dip(MainApp.getAppContext(), pxValue);
     }
 
     public static int px2dip(Context context, float pxValue) {

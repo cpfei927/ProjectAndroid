@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.cpfei.project.activity.CircleProgressBarActivity;
 import com.cpfei.project.activity.DragPhotoViewActivity;
 import com.cpfei.project.activity.MaterialDesignActivity;
 import com.cpfei.project.activity.RecyclerViewGridActivity;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.photoView).setOnClickListener(this);
         findViewById(R.id.recyclerGridView).setOnClickListener(this);
         findViewById(R.id.slideSureView).setOnClickListener(this);
+        findViewById(R.id.circleProgressBar).setOnClickListener(this);
 
     }
 
@@ -41,6 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.slideSureView:
                 startActivity(SlideSureActivity.createIntent(this));
+                break;
+            case R.id.circleProgressBar:
+                startActivity(CircleProgressBarActivity.createIntent(this));
                 break;
         }
     }

@@ -43,6 +43,8 @@
         <activity android:name=".activity.RecyclerViewGridActivity"/>
         <activity android:name=".activity.SlideSureActivity">
         </activity>
+        <activity android:name=".activity.CircleProgressBarActivity">
+        </activity>
     </application>
 
 </manifest>
