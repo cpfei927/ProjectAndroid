@@ -18,6 +18,7 @@ import com.cpfei.project.R;
 import com.cpfei.utils.PermissionUtil;
 
 /**
+ *
  * Normal Permissions就是不用动态申请的权限
  * <p>
  * android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
@@ -61,6 +62,10 @@ import com.cpfei.utils.PermissionUtil;
  * <p>
  * <p>
  * Dangerous Permissions就是需要动态申请的权限
+ *
+ * 注意 ：以下权限不仅要在manifest声明， 在代码中也要相应判断
+ * demo 见下方获取相机的动态权限
+ *
  * <p>
  * group.CONTACTS
  * android.permission.WRITE_CONTACTS
