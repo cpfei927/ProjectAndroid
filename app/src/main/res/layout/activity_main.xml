@@ -74,6 +74,18 @@
                 android:background="@color/color_fdab55"/>
 
 
+            <TextView
+                android:id="@+id/permissionActivity"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:text="PermissionActivity"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_22"
+                android:background="@color/color_ba78ff"/>
+
+
         </LinearLayout>
 
 

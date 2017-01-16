@@ -7,6 +7,7 @@ import android.view.View;
 import com.cpfei.project.activity.CircleProgressBarActivity;
 import com.cpfei.project.activity.DragPhotoViewActivity;
 import com.cpfei.project.activity.MaterialDesignActivity;
+import com.cpfei.project.activity.PermissionActivity;
 import com.cpfei.project.activity.RecyclerViewGridActivity;
 import com.cpfei.project.activity.SlideSureActivity;
 import com.cpfei.project.activity.material.ToolBarActivity;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.recyclerGridView).setOnClickListener(this);
         findViewById(R.id.slideSureView).setOnClickListener(this);
         findViewById(R.id.circleProgressBar).setOnClickListener(this);
+        findViewById(R.id.permissionActivity).setOnClickListener(this);
 
     }
 
@@ -46,6 +48,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.circleProgressBar:
                 startActivity(CircleProgressBarActivity.createIntent(this));
+                break;
+            case R.id.permissionActivity:
+                startActivity(PermissionActivity.createIntent(this));
                 break;
         }
     }

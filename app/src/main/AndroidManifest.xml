@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+
     <application
         android:name=".MainApp"
         android:allowBackup="true"
@@ -44,6 +48,8 @@
         <activity android:name=".activity.SlideSureActivity">
         </activity>
         <activity android:name=".activity.CircleProgressBarActivity">
+        </activity>
+        <activity android:name=".activity.PermissionActivity">
         </activity>
     </application>
 
