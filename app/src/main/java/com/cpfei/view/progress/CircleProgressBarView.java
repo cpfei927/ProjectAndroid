@@ -165,15 +165,26 @@ public class CircleProgressBarView extends View {
         gradientCirclePaint.setShadowLayer(10, 10, 10, Color.GREEN);
         canvas.drawArc(rectF, -90, (float) (percent / 100.0) * 360, false, gradientCirclePaint);
 
-        canvas.drawBitmap(thumbDn, centerX - thumbUp.getWidth()/2, centerY-thumbUp.getHeight()/2, textPaint);
+//        canvas.drawBitmap(thumbDn, centerX - thumbUp.getWidth()/2, centerY-thumbUp.getHeight()/2, textPaint);
 
 
+        //3.绘制100份线段，切分空心圆弧
+        for (float i = 0; i < 360; i += 3.6) {
+            double rad = i * Math.PI / 180;
+            float startX = (float) (centerX + (radius - circleBorderWidth) * Math.sin(rad));
+            float startY = (float) (centerX + (radius - circleBorderWidth) * Math.cos(rad));
+
+            float stopX = (float) (centerX + radius * Math.sin(rad) + 1);
+            float stopY = (float) (centerX + radius * Math.cos(rad) + 1);
+
+            canvas.drawLine(startX, startY, stopX, stopY, linePaint);
+        }
 
         //4.绘制文字
-//        float textWidth = textPaint.measureText(percent + "%");
-//        int textHeight = (int) (Math.ceil(textPaint.getFontMetrics().descent -
-//                textPaint.getFontMetrics().ascent) + 2);
-//        canvas.drawText(percent + "%", centerX - textWidth / 2, centerX + textHeight / 4, textPaint);
+        float textWidth = textPaint.measureText(percent + "%");
+        int textHeight = (int) (Math.ceil(textPaint.getFontMetrics().descent -
+                textPaint.getFontMetrics().ascent) + 2);
+        canvas.drawText(percent + "%", centerX - textWidth / 2, centerX + textHeight / 4, textPaint);
 
     }
 
