@@ -85,6 +85,17 @@
                 android:textSize="@dimen/text_size_22"
                 android:background="@color/color_ba78ff"/>
 
+            <TextView
+                android:id="@+id/rotate3dAnimation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:text="Rotate3dAnimation"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_22"
+                android:background="@color/color_d3d3d3"/>
+
 
         </LinearLayout>
 

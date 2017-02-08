@@ -9,6 +9,7 @@ import com.cpfei.project.activity.DragPhotoViewActivity;
 import com.cpfei.project.activity.MaterialDesignActivity;
 import com.cpfei.project.activity.PermissionActivity;
 import com.cpfei.project.activity.RecyclerViewGridActivity;
+import com.cpfei.project.activity.Rotate3dAnimationActivity;
 import com.cpfei.project.activity.SlideSureActivity;
 import com.cpfei.project.activity.material.ToolBarActivity;
 
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.slideSureView).setOnClickListener(this);
         findViewById(R.id.circleProgressBar).setOnClickListener(this);
         findViewById(R.id.permissionActivity).setOnClickListener(this);
+        findViewById(R.id.rotate3dAnimation).setOnClickListener(this);
 
     }
 
@@ -51,6 +53,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.permissionActivity:
                 startActivity(PermissionActivity.createIntent(this));
+                break;
+            case R.id.rotate3dAnimation:
+                startActivity(Rotate3dAnimationActivity.createIntent(this));
                 break;
         }
     }
