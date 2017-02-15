@@ -38,7 +38,7 @@ public class StereoView extends ViewGroup {
     private Matrix mMatrix;
     private int mWidth;//容器的宽度
     private int mHeight;//容器的高度
-    private static final int standerSpeed = 2000;
+    private static final int standerSpeed = 800;
     private static final int flingSpeed = 800;
     private int addCount;//记录手离开屏幕后，需要新增的页面次数
     private int alreadyAdd = 0;//对滑动多页时的已经新增页面次数的记录

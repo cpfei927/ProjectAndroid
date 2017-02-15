@@ -1,6 +1,8 @@
 package com.cpfei.project.activity.stereoview;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -60,6 +62,7 @@ public class SettingActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 stereoView1.toNext();
+//                mHandler.sendEmptyMessageDelayed(0, 2000);
             }
         });
         btnSelect.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +72,16 @@ public class SettingActivity extends AppCompatActivity {
             }
         });
     }
+
+
+    Handler mHandler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            stereoView2.toNext();
+            mHandler.sendEmptyMessageDelayed(0, 2000);
+        }
+    };
 
     private void initView() {
         stereoView1 = (StereoView) findViewById(R.id.stereoView1);
