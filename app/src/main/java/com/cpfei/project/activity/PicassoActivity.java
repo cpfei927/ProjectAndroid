@@ -41,8 +41,6 @@ public class PicassoActivity extends AppCompatActivity {
         mCxt = this;
         picassoListView = ((ListView) findViewById(R.id.picassoListView));
 
-
-
         urls.add("http://img05.tooopen.com/images/20141216/sy_77381495134.jpg");
         urls.add("http://img05.tooopen.com/images/20141222/sy_77687647775.jpg");
         urls.add("http://img05.tooopen.com/images/20150202/sy_80219211654.jpg");
