@@ -15,3 +15,6 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+
+#picasso 图片缓存需要的权限
+-dontwarn com.squareup.okhttp.**

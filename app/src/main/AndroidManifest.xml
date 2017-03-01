@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:name=".MainApp"
@@ -51,10 +52,11 @@
         </activity>
         <activity android:name=".activity.Rotate3dAnimationActivity">
         </activity>
-
         <activity android:name=".activity.stereoview.SettingActivity"/>
         <activity android:name=".activity.stereoview.ImageActivity"/>
         <activity android:name=".activity.stereoview.LoginActivity"/>
+        <activity android:name=".activity.PicassoActivity">
+        </activity>
     </application>
 
 </manifest>
