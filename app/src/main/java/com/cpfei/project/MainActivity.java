@@ -12,6 +12,7 @@ import com.cpfei.project.activity.PicassoActivity;
 import com.cpfei.project.activity.RecyclerViewGridActivity;
 import com.cpfei.project.activity.Rotate3dAnimationActivity;
 import com.cpfei.project.activity.SlideSureActivity;
+import com.cpfei.project.activity.ViewPagerActivity;
 import com.cpfei.project.activity.material.ToolBarActivity;
 import com.squareup.picasso.Picasso;
 
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.permissionActivity).setOnClickListener(this);
         findViewById(R.id.rotate3dAnimation).setOnClickListener(this);
         findViewById(R.id.picasso).setOnClickListener(this);
+        findViewById(R.id.viewPager).setOnClickListener(this);
 
     }
 
@@ -62,6 +64,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.picasso:
                 startActivity(PicassoActivity.createIntent(this));
+                break;
+            case R.id.viewPager:
+                startActivity(ViewPagerActivity.createIntent(this));
                 break;
 
         }

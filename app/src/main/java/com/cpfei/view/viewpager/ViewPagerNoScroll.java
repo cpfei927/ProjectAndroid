@@ -1,4 +1,4 @@
-package com.cpfei.view;
+package com.cpfei.view.viewpager;
 
 import android.content.Context;
 import android.support.v4.view.ViewPager;

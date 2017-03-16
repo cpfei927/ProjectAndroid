@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 
-
     <application
         android:name=".MainApp"
         android:allowBackup="true"
@@ -57,6 +56,8 @@
         <activity android:name=".activity.stereoview.ImageActivity"/>
         <activity android:name=".activity.stereoview.LoginActivity"/>
         <activity android:name=".activity.PicassoActivity">
+        </activity>
+        <activity android:name=".activity.ViewPagerActivity">
         </activity>
     </application>
 
