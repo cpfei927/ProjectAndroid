@@ -6,6 +6,7 @@ import android.view.View;
 
 import com.cpfei.project.activity.CircleProgressBarActivity;
 import com.cpfei.project.activity.DragPhotoViewActivity;
+import com.cpfei.project.activity.DragViewActivity;
 import com.cpfei.project.activity.MaterialDesignActivity;
 import com.cpfei.project.activity.PermissionActivity;
 import com.cpfei.project.activity.PicassoActivity;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.rotate3dAnimation).setOnClickListener(this);
         findViewById(R.id.picasso).setOnClickListener(this);
         findViewById(R.id.viewPager).setOnClickListener(this);
+        findViewById(R.id.dragView).setOnClickListener(this);
 
     }
 
@@ -67,6 +69,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.viewPager:
                 startActivity(ViewPagerActivity.createIntent(this));
+                break;
+            case R.id.dragView:
+                startActivity(DragViewActivity.createIntent(this));
                 break;
 
         }

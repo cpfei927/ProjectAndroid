@@ -59,6 +59,8 @@
         </activity>
         <activity android:name=".activity.ViewPagerActivity">
         </activity>
+        <activity android:name=".activity.DragViewActivity">
+        </activity>
     </application>
 
 </manifest>
