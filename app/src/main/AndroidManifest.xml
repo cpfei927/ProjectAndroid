@@ -61,6 +61,10 @@
         </activity>
         <activity android:name=".activity.DragViewActivity">
         </activity>
+        <activity android:name=".activity.ViewPagerTransformerActivity">
+        </activity>
+        <activity android:name=".activity.BounceListViewActivity">
+        </activity>
     </application>
 
 </manifest>

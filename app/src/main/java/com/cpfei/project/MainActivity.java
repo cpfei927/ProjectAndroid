@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.cpfei.project.activity.BounceListViewActivity;
 import com.cpfei.project.activity.CircleProgressBarActivity;
 import com.cpfei.project.activity.DragPhotoViewActivity;
 import com.cpfei.project.activity.DragViewActivity;
@@ -14,6 +15,7 @@ import com.cpfei.project.activity.RecyclerViewGridActivity;
 import com.cpfei.project.activity.Rotate3dAnimationActivity;
 import com.cpfei.project.activity.SlideSureActivity;
 import com.cpfei.project.activity.ViewPagerActivity;
+import com.cpfei.project.activity.ViewPagerTransformerActivity;
 import com.cpfei.project.activity.material.ToolBarActivity;
 import com.squareup.picasso.Picasso;
 
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.picasso).setOnClickListener(this);
         findViewById(R.id.viewPager).setOnClickListener(this);
         findViewById(R.id.dragView).setOnClickListener(this);
+        findViewById(R.id.viewPagerTransformer).setOnClickListener(this);
+        findViewById(R.id.bounceListView).setOnClickListener(this);
 
     }
 
@@ -72,6 +76,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.dragView:
                 startActivity(DragViewActivity.createIntent(this));
+                break;
+
+            case R.id.viewPagerTransformer:
+                startActivity(ViewPagerTransformerActivity.createIntent(this));
+                break;
+            case R.id.bounceListView:
+                startActivity(BounceListViewActivity.createIntent(this));
                 break;
 
         }

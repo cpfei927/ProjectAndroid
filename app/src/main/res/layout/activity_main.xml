@@ -14,6 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dimen_30dp"
             android:layout_marginRight="@dimen/dimen_30dp"
+            android:paddingBottom="@dimen/dimen_20dp"
             android:orientation="vertical">
 
             <TextView
@@ -131,6 +132,31 @@
                 android:textColor="@color/color_white"
                 android:textSize="@dimen/text_size_22"
                 android:background="@color/color_fdab55"/>
+
+
+
+            <TextView
+                android:id="@+id/viewPagerTransformer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:text="ViewPagerTransformer"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_22"
+                android:background="@color/color_46c062"/>
+
+
+            <TextView
+                android:id="@+id/bounceListView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:text="BounceListView"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:gravity="center"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_22"
+                android:background="@color/color_f6a90e"/>
 
         </LinearLayout>
 
