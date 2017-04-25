@@ -16,6 +16,7 @@ import com.cpfei.project.activity.Rotate3dAnimationActivity;
 import com.cpfei.project.activity.SlideSureActivity;
 import com.cpfei.project.activity.ViewPagerActivity;
 import com.cpfei.project.activity.ViewPagerTransformerActivity;
+import com.cpfei.project.activity.WebViewActivity;
 import com.cpfei.project.activity.material.ToolBarActivity;
 import com.squareup.picasso.Picasso;
 
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.dragView).setOnClickListener(this);
         findViewById(R.id.viewPagerTransformer).setOnClickListener(this);
         findViewById(R.id.bounceListView).setOnClickListener(this);
+        findViewById(R.id.webView).setOnClickListener(this);
 
     }
 
@@ -83,6 +85,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.bounceListView:
                 startActivity(BounceListViewActivity.createIntent(this));
+                break;
+            case R.id.webView:
+                startActivity(WebViewActivity.createIntent(this));
                 break;
 
         }

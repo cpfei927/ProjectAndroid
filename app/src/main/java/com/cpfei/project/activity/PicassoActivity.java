@@ -86,10 +86,10 @@ public class PicassoActivity extends AppCompatActivity {
 
             ImageView imageView = new ImageView(mCxt);
 
-            LinearLayout.LayoutParams layoutParams
-                    = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, DensityUtils.dip2px(mCxt, 150));
-            layoutParams.setMargins(0, DensityUtils.dip2px(mCxt, 10), 0, DensityUtils.dip2px(mCxt, 10));
-            imageView.setLayoutParams(layoutParams);
+//            LinearLayout.LayoutParams layoutParams
+//                    = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, DensityUtils.dip2px(mCxt, 150));
+//            layoutParams.setMargins(0, DensityUtils.dip2px(mCxt, 10), 0, DensityUtils.dip2px(mCxt, 10));
+//            imageView.setLayoutParams(layoutParams);
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             Picasso.with(mCxt).load(urls.get(position)).placeholder(R.mipmap.ic_loading).error(R.mipmap.ic_loading).into(imageView);
             return imageView;
