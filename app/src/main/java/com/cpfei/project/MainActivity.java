@@ -19,6 +19,7 @@ import com.cpfei.project.activity.PicassoActivity;
 import com.cpfei.project.activity.RecyclerViewGridActivity;
 import com.cpfei.project.activity.Rotate3dAnimationActivity;
 import com.cpfei.project.activity.SlideSureActivity;
+import com.cpfei.project.activity.TabLayoutAndViewPagerActivity;
 import com.cpfei.project.activity.ViewPagerActivity;
 import com.cpfei.project.activity.ViewPagerTransformerActivity;
 import com.cpfei.project.activity.WebViewActivity;
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         strings.add("BounceListView");
         strings.add("WebView");
         strings.add("自定义隐藏密码");
+        strings.add("TabLayoutViewPager");
 
         ListView listView = (ListView) findViewById(R.id.listview);
         ArrayAdapter<String> ada = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, strings);
@@ -111,6 +113,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             case 13:
                 startActivity(PasswordActivity.createIntent(this));
+                break;
+            case 14:
+                startActivity(TabLayoutAndViewPagerActivity.createIntent(this));
                 break;
 
         }

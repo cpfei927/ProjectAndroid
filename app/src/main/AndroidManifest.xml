@@ -44,20 +44,21 @@
             android:name=".activity.material.CoordinatorLayoutActivity"
             android:theme="@style/AppThemeNoTitleBar" />
         <activity android:name=".activity.RecyclerViewGridActivity" />
-        <activity android:name=".activity.SlideSureActivity"></activity>
-        <activity android:name=".activity.CircleProgressBarActivity"></activity>
-        <activity android:name=".activity.PermissionActivity"></activity>
-        <activity android:name=".activity.Rotate3dAnimationActivity"></activity>
+        <activity android:name=".activity.SlideSureActivity" />
+        <activity android:name=".activity.CircleProgressBarActivity" />
+        <activity android:name=".activity.PermissionActivity" />
+        <activity android:name=".activity.Rotate3dAnimationActivity" />
         <activity android:name=".activity.stereoview.SettingActivity" />
         <activity android:name=".activity.stereoview.ImageActivity" />
         <activity android:name=".activity.stereoview.LoginActivity" />
-        <activity android:name=".activity.PicassoActivity"></activity>
-        <activity android:name=".activity.ViewPagerActivity"></activity>
-        <activity android:name=".activity.DragViewActivity"></activity>
-        <activity android:name=".activity.ViewPagerTransformerActivity"></activity>
-        <activity android:name=".activity.BounceListViewActivity"></activity>
-        <activity android:name=".activity.WebViewActivity"></activity>
-        <activity android:name=".activity.PasswordActivity"></activity>
+        <activity android:name=".activity.PicassoActivity" />
+        <activity android:name=".activity.ViewPagerActivity" />
+        <activity android:name=".activity.DragViewActivity" />
+        <activity android:name=".activity.ViewPagerTransformerActivity" />
+        <activity android:name=".activity.BounceListViewActivity" />
+        <activity android:name=".activity.WebViewActivity" />
+        <activity android:name=".activity.PasswordActivity" />
+        <activity android:name=".activity.TabLayoutAndViewPagerActivity"></activity>
     </application>
 
 </manifest>
