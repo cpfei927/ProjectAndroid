@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="NumberView">
+
+        <attr name="numberColor" format="color"/>
+        <attr name="charSpace" format="dimension"/>
+        <attr name="text_Size" format="dimension"/>
+        <attr name="number" format="string"/>
+        <attr name="number_gravity_left" format="boolean"/>
+
+    </declare-styleable>
+
+</resources>

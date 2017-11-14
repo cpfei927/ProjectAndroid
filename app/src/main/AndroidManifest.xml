@@ -58,7 +58,8 @@
         <activity android:name=".activity.BounceListViewActivity" />
         <activity android:name=".activity.WebViewActivity" />
         <activity android:name=".activity.PasswordActivity" />
-        <activity android:name=".activity.TabLayoutAndViewPagerActivity"></activity>
+        <activity android:name=".activity.TabLayoutAndViewPagerActivity" />
+        <activity android:name=".activity.NumberActivity"></activity>
     </application>
 
 </manifest>

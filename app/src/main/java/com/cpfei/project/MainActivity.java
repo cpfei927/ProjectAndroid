@@ -13,6 +13,7 @@ import com.cpfei.project.activity.CircleProgressBarActivity;
 import com.cpfei.project.activity.DragPhotoViewActivity;
 import com.cpfei.project.activity.DragViewActivity;
 import com.cpfei.project.activity.MaterialDesignActivity;
+import com.cpfei.project.activity.NumberActivity;
 import com.cpfei.project.activity.PasswordActivity;
 import com.cpfei.project.activity.PermissionActivity;
 import com.cpfei.project.activity.PicassoActivity;
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         strings.add("WebView");
         strings.add("自定义隐藏密码");
         strings.add("TabLayoutViewPager");
+        strings.add("NumberView数字增加动画");
 
         ListView listView = (ListView) findViewById(R.id.listview);
         ArrayAdapter<String> ada = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, strings);
@@ -116,6 +118,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             case 14:
                 startActivity(TabLayoutAndViewPagerActivity.createIntent(this));
+                break;
+            case 15:
+                startActivity(NumberActivity.createIntent(this));
                 break;
 
         }
