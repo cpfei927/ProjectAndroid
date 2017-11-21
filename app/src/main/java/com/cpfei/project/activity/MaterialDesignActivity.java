@@ -9,6 +9,7 @@ import android.view.View;
 import com.cpfei.project.R;
 import com.cpfei.project.activity.material.CoordinatorLayoutActivity;
 import com.cpfei.project.activity.material.DrawerLayoutActivity;
+import com.cpfei.project.activity.material.TabLayoutActivity;
 import com.cpfei.project.activity.material.ToolBarActivity;
 
 /**
@@ -33,6 +34,7 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
         findViewById(R.id.toolBar).setOnClickListener(this);
         findViewById(R.id.drawerLayout).setOnClickListener(this);
         findViewById(R.id.coordinatorLayout).setOnClickListener(this);
+        findViewById(R.id.tabLayout).setOnClickListener(this);
 
     }
 
@@ -47,6 +49,9 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.coordinatorLayout:
                 startActivity(CoordinatorLayoutActivity.createIntent(this));
+                break;
+            case R.id.tabLayout:
+                startActivity(TabLayoutActivity.createIntent(this));
                 break;
         }
     }

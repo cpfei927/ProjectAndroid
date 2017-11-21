@@ -59,7 +59,9 @@
         <activity android:name=".activity.WebViewActivity" />
         <activity android:name=".activity.PasswordActivity" />
         <activity android:name=".activity.TabLayoutAndViewPagerActivity" />
-        <activity android:name=".activity.NumberActivity"></activity>
+        <activity android:name=".activity.NumberActivity" />
+        <activity android:name=".activity.material.TabLayoutActivity"
+            android:label="TabLayout"></activity>
     </application>
 
 </manifest>

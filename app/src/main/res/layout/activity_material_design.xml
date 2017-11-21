@@ -72,6 +72,16 @@
                 android:textSize="@dimen/text_size_22" />
 
 
+            <TextView
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp"
+                android:background="@color/color_b3b3b3"
+                android:gravity="center"
+                android:text="TabLayout"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_22" />
 
 
         </LinearLayout>
