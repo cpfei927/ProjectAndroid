@@ -20,6 +20,8 @@ import com.cpfei.project.R;
 
 /**
  * http://www.jianshu.com/p/2b2bb6be83a8
+ *
+ * 可以配合TabItem使用高级效果
  */
 public class TabLayoutActivity extends AppCompatActivity {
 

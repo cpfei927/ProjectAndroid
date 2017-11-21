@@ -14,6 +14,9 @@ import android.widget.TextView;
 import com.cpfei.project.R;
 import com.cpfei.view.viewpager.ChildViewPager;
 
+/**
+ * 解决两个ViewPager的滑动冲突
+ */
 public class ViewPagerActivity extends AppCompatActivity {
 
     protected ViewPager viewpager;
