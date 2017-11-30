@@ -36,10 +36,6 @@ import java.util.UUID;
 
 /******************************************
  * 类描述： 获取手机信息相关类 类名称：PhoneInfo_U
- * 
- * @version: 1.0
- * @author: shaoningYang
- * @time: 2014-3-5 20:41
  ******************************************/
 public class PhoneInfo_U {
 
