@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.GridLayoutManager.SpanSizeLookup;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.cpfei.project.R;
+import com.cpfei.utils.LogUtil;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.assist.ImageScaleType;
@@ -35,6 +37,9 @@ public class RecyclerViewGridActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view_grid);
+
+
+
         options = new DisplayImageOptions.Builder()
                 .showImageForEmptyUri(R.mipmap.ic_launcher)
                 .showImageOnFail(R.mipmap.ic_launcher)
@@ -47,13 +52,18 @@ public class RecyclerViewGridActivity extends AppCompatActivity {
                 .build();
 
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerGridView);
+
+//        final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+//        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+//        mRecyclerView.setLayoutManager(linearLayoutManager);
+
         final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
         gridLayoutManager.setSpanSizeLookup(new SpanSizeLookup() {
             @Override
             public int getSpanSize(int position) {
 
-                if (position % 6 == 0) {
-                    return gridLayoutManager.getSpanCount();
+                if (position == 0) {
+                    return 2;
                 }
                 return 1;
             }
@@ -61,6 +71,34 @@ public class RecyclerViewGridActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(gridLayoutManager);
 
         mRecyclerView.setAdapter(new SampleAdapter());
+
+
+        mRecyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+//                LogUtil.d("Tag", "onScrollStateChanged = " + newState);
+            }
+
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+
+                int firstVisibleItemPosition = gridLayoutManager.findFirstVisibleItemPosition();
+                if (firstVisibleItemPosition == 0) {
+                    LogUtil.d("Tag", "onScrolled , " + firstVisibleItemPosition);
+                }
+                super.onScrolled(recyclerView, dx, dy);
+            }
+        });
+
+
+//        findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                linearLayoutManager.scrollToPositionWithOffset(10, 0);
+//            }
+//        });
 
     }
 
@@ -98,9 +136,9 @@ public class RecyclerViewGridActivity extends AppCompatActivity {
 
         @Override
         public int getItemViewType(int position) {
-            if (position % 6 == 0) {
-                return 1;
-            }
+//            if (position % 6 == 0) {
+//                return 1;
+//            }
             return 0;
         }
 
