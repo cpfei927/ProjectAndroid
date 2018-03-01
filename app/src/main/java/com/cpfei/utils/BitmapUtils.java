@@ -4,11 +4,15 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.ColorMatrix;
 import android.graphics.ColorMatrixColorFilter;
 import android.graphics.Paint;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
+import android.graphics.RectF;
+
+import com.cpfei.project.R;
 
 /**
  * 处理Bitmap
@@ -136,5 +140,23 @@ public class BitmapUtils {
         inSampleSize = inSampleSize < 1 ? 1 : inSampleSize;
         return inSampleSize;
     }
+
+
+    public static Bitmap getNumberBitmap(Context context, int number) {
+
+        Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.map_icon).copy(Bitmap.Config.ARGB_8888, true);
+        Canvas canvas = new Canvas(bitmap);
+        // draw text
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.DEV_KERN_TEXT_FLAG);
+        paint.setColor(Color.WHITE);
+        paint.setTextSize(30);
+        paint.setTextAlign(Paint.Align.CENTER);
+        Paint.FontMetricsInt fontMetrics = paint.getFontMetricsInt();
+        RectF rect = new RectF(0, 0, canvas.getWidth(), canvas.getHeight());
+        float baseline = (rect.bottom + rect.top - fontMetrics.bottom - fontMetrics.top) / 2;
+        canvas.drawText(String.valueOf(number), rect.centerX(), baseline, paint);
+        return bitmap;
+    }
+
 
 }

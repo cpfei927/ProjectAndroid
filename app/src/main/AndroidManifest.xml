@@ -60,8 +60,12 @@
         <activity android:name=".activity.PasswordActivity" />
         <activity android:name=".activity.TabLayoutAndViewPagerActivity" />
         <activity android:name=".activity.NumberActivity" />
-        <activity android:name=".activity.material.TabLayoutActivity"
-            android:label="TabLayout"></activity>
+        <activity
+            android:name=".activity.material.TabLayoutActivity"
+            android:label="TabLayout" />
+        <activity android:name=".activity.OptionsActivity" />
+        <activity android:name=".activity.ScrollViewViewPagerActivity" />
+        <activity android:name=".activity.LyricActivity"></activity>
     </application>
 
 </manifest>

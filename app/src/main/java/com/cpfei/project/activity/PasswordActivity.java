@@ -5,10 +5,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cpfei.project.R;
+import com.cpfei.utils.BitmapUtils;
 import com.cpfei.view.PasswordView;
 
 public class PasswordActivity extends AppCompatActivity implements PasswordView.PasswordListener {
@@ -33,6 +35,17 @@ public class PasswordActivity extends AppCompatActivity implements PasswordView.
         passwordView = (PasswordView) findViewById(R.id.passwordView);
 
         passwordView.setPasswordListener(this);
+
+
+        ImageView viewById1 = (ImageView) findViewById(R.id.image1);
+        ImageView viewById2 = (ImageView) findViewById(R.id.image2);
+        ImageView viewById3 = (ImageView) findViewById(R.id.image3);
+
+
+        viewById1.setImageBitmap(BitmapUtils.getNumberBitmap(this, 1));
+        viewById2.setImageBitmap(BitmapUtils.getNumberBitmap(this, 2));
+        viewById3.setImageBitmap(BitmapUtils.getNumberBitmap(this, 3));
+
 
     }
 

@@ -6,12 +6,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 import com.cpfei.project.activity.BounceListViewActivity;
 import com.cpfei.project.activity.CircleProgressBarActivity;
 import com.cpfei.project.activity.DragPhotoViewActivity;
 import com.cpfei.project.activity.DragViewActivity;
+import com.cpfei.project.activity.LyricActivity;
 import com.cpfei.project.activity.MaterialDesignActivity;
 import com.cpfei.project.activity.NumberActivity;
 import com.cpfei.project.activity.PasswordActivity;
@@ -19,19 +19,20 @@ import com.cpfei.project.activity.PermissionActivity;
 import com.cpfei.project.activity.PicassoActivity;
 import com.cpfei.project.activity.RecyclerViewGridActivity;
 import com.cpfei.project.activity.Rotate3dAnimationActivity;
+import com.cpfei.project.activity.ScrollViewViewPagerActivity;
 import com.cpfei.project.activity.SlideSureActivity;
 import com.cpfei.project.activity.TabLayoutAndViewPagerActivity;
 import com.cpfei.project.activity.ViewPagerActivity;
 import com.cpfei.project.activity.ViewPagerTransformerActivity;
 import com.cpfei.project.activity.WebViewActivity;
-import com.cpfei.project.activity.material.ToolBarActivity;
-import com.squareup.picasso.Picasso;
+import com.cpfei.project.activity.OptionsActivity;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
     protected ArrayList<String> strings;
+    protected ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,8 +62,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         strings.add("自定义隐藏密码");
         strings.add("TabLayoutViewPager");
         strings.add("NumberView数字增加动画");
+        strings.add("ActivityOptions");
+        strings.add("ScrollView嵌套ViewPager");
+        strings.add("LyricTextView 歌词渐变");
 
-        ListView listView = (ListView) findViewById(R.id.listview);
+        listView = (ListView) findViewById(R.id.listview);
         ArrayAdapter<String> ada = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, strings);
         listView.setAdapter(ada);
         listView.setOnItemClickListener(this);
@@ -122,7 +126,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case 15:
                 startActivity(NumberActivity.createIntent(this));
                 break;
-
+            case 16:
+                OptionsActivity.createIntent(this, listView);
+                break;
+            case 17:
+                startActivity(ScrollViewViewPagerActivity.createIntent(this));
+                break;
+            case 18:
+                startActivity(LyricActivity.createIntent(this));
+                break;
         }
 
     }

@@ -8,6 +8,7 @@ import android.view.MotionEvent;
 
 /**
  * Created by cpfei on 2017/3/16.
+ * 解决ViewPager嵌套ViewPager滑动冲突
  */
 
 public class ChildViewPager extends ViewPager {
