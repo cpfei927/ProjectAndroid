@@ -17,11 +17,14 @@ import com.cpfei.project.activity.NumberActivity;
 import com.cpfei.project.activity.PasswordActivity;
 import com.cpfei.project.activity.PermissionActivity;
 import com.cpfei.project.activity.PicassoActivity;
+import com.cpfei.project.activity.PopupWindowActivity;
 import com.cpfei.project.activity.RecyclerViewGridActivity;
 import com.cpfei.project.activity.Rotate3dAnimationActivity;
 import com.cpfei.project.activity.ScrollViewViewPagerActivity;
+import com.cpfei.project.activity.SelectTextActivity;
 import com.cpfei.project.activity.SlideSureActivity;
 import com.cpfei.project.activity.TabLayoutAndViewPagerActivity;
+import com.cpfei.project.activity.ViewIsVisibleActivity;
 import com.cpfei.project.activity.ViewPagerActivity;
 import com.cpfei.project.activity.ViewPagerTransformerActivity;
 import com.cpfei.project.activity.WebViewActivity;
@@ -65,6 +68,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         strings.add("ActivityOptions");
         strings.add("ScrollView嵌套ViewPager");
         strings.add("LyricTextView 歌词渐变");
+        strings.add("选择文本");
+        strings.add("判断View是否在屏幕中显示");
+        strings.add("PopupWindow");
 
         listView = (ListView) findViewById(R.id.listview);
         ArrayAdapter<String> ada = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, strings);
@@ -134,6 +140,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             case 18:
                 startActivity(LyricActivity.createIntent(this));
+                break;
+            case 19:
+                startActivity(SelectTextActivity.createIntent(this));
+                break;
+            case 20:
+                startActivity(ViewIsVisibleActivity.createIntent(this));
+                break;
+            case 21:
+                startActivity(PopupWindowActivity.createIntent(this));
                 break;
         }
 

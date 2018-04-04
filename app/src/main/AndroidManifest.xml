@@ -65,7 +65,12 @@
             android:label="TabLayout" />
         <activity android:name=".activity.OptionsActivity" />
         <activity android:name=".activity.ScrollViewViewPagerActivity" />
-        <activity android:name=".activity.LyricActivity"></activity>
+        <activity android:name=".activity.LyricActivity" />
+        <activity
+            android:name=".activity.SelectTextActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.ViewIsVisibleActivity" />
+        <activity android:name=".activity.PopupWindowActivity"></activity>
     </application>
 
 </manifest>
