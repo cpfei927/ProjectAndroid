@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cpfei.project.activity.DragRecyclerViewActivity">
+
+
+    <com.cpfei.view.drag.DragRecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent"/>
+
+
+    <com.cpfei.view.viewdraghelper.MyDragView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试拖动"
+            android:textSize="@dimen/dimen_30dp"/>
+
+
+        <com.cpfei.view.viewdraghelper.MyDragView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/dimen_100dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试拖动1"
+                android:background="@color/color_6c6a6a"
+                android:textSize="@dimen/dimen_30dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="测试拖动1"
+                android:background="@color/color_7a7a7a"
+                android:textSize="@dimen/dimen_30dp"/>
+
+
+
+        </com.cpfei.view.viewdraghelper.MyDragView>
+
+
+
+
+    </com.cpfei.view.viewdraghelper.MyDragView>
+
+</android.support.constraint.ConstraintLayout>

@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.cpfei.project.activity.BounceListViewActivity;
 import com.cpfei.project.activity.CircleProgressBarActivity;
 import com.cpfei.project.activity.DragPhotoViewActivity;
+import com.cpfei.project.activity.DragRecyclerViewActivity;
 import com.cpfei.project.activity.DragViewActivity;
 import com.cpfei.project.activity.LyricActivity;
 import com.cpfei.project.activity.MaterialDesignActivity;
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         strings.add("选择文本");
         strings.add("判断View是否在屏幕中显示");
         strings.add("PopupWindow");
+        strings.add("DragRecyclerView");
 
         listView = (ListView) findViewById(R.id.listview);
         ArrayAdapter<String> ada = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, strings);
@@ -149,6 +151,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             case 21:
                 startActivity(PopupWindowActivity.createIntent(this));
+                break;
+            case 22:
+                startActivity(DragRecyclerViewActivity.createIntent(this));
                 break;
         }
 

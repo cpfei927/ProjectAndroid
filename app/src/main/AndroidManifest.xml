@@ -70,7 +70,8 @@
             android:name=".activity.SelectTextActivity"
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".activity.ViewIsVisibleActivity" />
-        <activity android:name=".activity.PopupWindowActivity"></activity>
+        <activity android:name=".activity.PopupWindowActivity" />
+        <activity android:name=".activity.DragRecyclerViewActivity"></activity>
     </application>
 
 </manifest>

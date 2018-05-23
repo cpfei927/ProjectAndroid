@@ -14,6 +14,8 @@
         android:layout_height="@dimen/dimen_48dp"
         app:tabMinWidth="@dimen/dimen_100dp"
         app:tabMaxWidth="150dp"
+        app:tabIndicatorHeight="@dimen/dimen_3dp"
+        android:background="@drawable/tablayout_bg"
         app:tabTextAppearance="@style/TabLayoutTextStyle"
         app:tabIndicatorColor="@color/color_7a7a7a"
         app:tabMode="scrollable"/>
