@@ -25,7 +25,6 @@ public class DragRecyclerViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drag_recycler_view);
 
-
         strings = new ArrayList<>();
         for (int i = 0; i < 30; i++) {
             strings.add("Item == " + i);

@@ -7,6 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.cpfei.androidlib.MavenDemo;
 import com.cpfei.project.activity.BounceListViewActivity;
 import com.cpfei.project.activity.CircleProgressBarActivity;
 import com.cpfei.project.activity.DragPhotoViewActivity;
@@ -21,6 +22,7 @@ import com.cpfei.project.activity.PicassoActivity;
 import com.cpfei.project.activity.PopupWindowActivity;
 import com.cpfei.project.activity.RecyclerViewGridActivity;
 import com.cpfei.project.activity.Rotate3dAnimationActivity;
+import com.cpfei.project.activity.ScrollViewAdapterActivity;
 import com.cpfei.project.activity.ScrollViewViewPagerActivity;
 import com.cpfei.project.activity.SelectTextActivity;
 import com.cpfei.project.activity.SlideSureActivity;
@@ -73,11 +75,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         strings.add("判断View是否在屏幕中显示");
         strings.add("PopupWindow");
         strings.add("DragRecyclerView");
+        strings.add("ScrollViewAdapter");
 
         listView = (ListView) findViewById(R.id.listview);
         ArrayAdapter<String> ada = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, strings);
         listView.setAdapter(ada);
         listView.setOnItemClickListener(this);
+
+        int add = new MavenDemo().add(5, 6);
+
 
     }
 
@@ -154,6 +160,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 break;
             case 22:
                 startActivity(DragRecyclerViewActivity.createIntent(this));
+                break;
+            case 23:
+                startActivity(ScrollViewAdapterActivity.createIntent(this));
                 break;
         }
 

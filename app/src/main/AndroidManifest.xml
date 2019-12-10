@@ -14,6 +14,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.ScrollViewAdapterActivity"></activity>
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
@@ -71,7 +72,7 @@
             android:windowSoftInputMode="stateHidden" />
         <activity android:name=".activity.ViewIsVisibleActivity" />
         <activity android:name=".activity.PopupWindowActivity" />
-        <activity android:name=".activity.DragRecyclerViewActivity"></activity>
+        <activity android:name=".activity.DragRecyclerViewActivity" />
     </application>
 
 </manifest>
