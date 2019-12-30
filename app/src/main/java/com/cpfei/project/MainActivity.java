@@ -7,7 +7,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.cpfei.androidlib.MavenDemo;
+//import com.cpfei.androidlib.MavenDemo;
 import com.cpfei.project.activity.BounceListViewActivity;
 import com.cpfei.project.activity.CircleProgressBarActivity;
 import com.cpfei.project.activity.DragPhotoViewActivity;
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         listView.setAdapter(ada);
         listView.setOnItemClickListener(this);
 
-        int add = new MavenDemo().add(5, 6);
+//        int add = new MavenDemo().add(5, 6);
 
 
     }
