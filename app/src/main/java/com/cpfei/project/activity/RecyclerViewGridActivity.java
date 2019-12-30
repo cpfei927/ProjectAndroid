@@ -3,6 +3,8 @@ package com.cpfei.project.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Rect;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -14,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.cpfei.project.R;
 import com.cpfei.utils.LogUtil;
@@ -24,6 +27,8 @@ import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
 
 public class RecyclerViewGridActivity extends AppCompatActivity {
 
+
+    private Handler handler;
 
     public static Intent createIntent(Context context) {
         Intent intent = new Intent(context, RecyclerViewGridActivity.class);
@@ -91,6 +96,10 @@ public class RecyclerViewGridActivity extends AppCompatActivity {
             }
         });
 
+        handler = new Handler();
+
+        handler.postDelayed(runnable, 1000);
+
 
 //        findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -102,7 +111,20 @@ public class RecyclerViewGridActivity extends AppCompatActivity {
 
     }
 
+    Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            Rect rect = new Rect();
+            boolean globalVisibleRect = viewHeader.getGlobalVisibleRect(rect);
+            Toast.makeText(RecyclerViewGridActivity.this, "" + globalVisibleRect, Toast.LENGTH_SHORT).show();
+            LogUtil.d("Tag", "globalVisibleRect , " + globalVisibleRect);
+            LogUtil.d("Tag", "Rect ,left " + rect.left + " top, " + rect.top + " right ," + rect.right + " bottom, " +  rect.bottom);
+//            handler.postDelayed(runnable, 3000);
+        }
+    };
 
+
+    View viewHeader;
 
     class SampleAdapter extends RecyclerView.Adapter {
 
@@ -110,8 +132,8 @@ public class RecyclerViewGridActivity extends AppCompatActivity {
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
             if (viewType == 1) {
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_title, null);
-                return new HeaderViewHolder(view);
+                viewHeader = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_title, null);
+                return new HeaderViewHolder(viewHeader);
             }
             View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_img, null);
             return new ItemViewHolder(view);
@@ -136,9 +158,9 @@ public class RecyclerViewGridActivity extends AppCompatActivity {
 
         @Override
         public int getItemViewType(int position) {
-//            if (position % 6 == 0) {
-//                return 1;
-//            }
+            if (position == 0) {
+                return 1;
+            }
             return 0;
         }
 
@@ -148,6 +170,17 @@ public class RecyclerViewGridActivity extends AppCompatActivity {
             public HeaderViewHolder(View itemView) {
                 super(itemView);
                 mTextView = (TextView) itemView.findViewById(R.id.title);
+//                mTextView.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        Rect rect = new Rect();
+//                        boolean globalVisibleRect = v.getGlobalVisibleRect(rect);
+//                        Toast.makeText(RecyclerViewGridActivity.this, "" + globalVisibleRect, Toast.LENGTH_LONG).show();
+//                    }
+//                });
+
+
+
             }
         }
 
